@@ -14,27 +14,16 @@
         android:layout_height="wrap_content"
         android:text="New Button"
         android:id="@+id/btn1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="69dp" />
+        android:layout_alignTop="@+id/btn2" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Button"
         android:id="@+id/btn2"
-        android:layout_marginBottom="69dp"
+        android:layout_marginBottom="72dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/btn1" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/stringQstNumb"
-        android:id="@+id/qstNumb"
-        android:layout_marginTop="40dp"
-        android:layout_below="@+id/btn1"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -45,5 +34,34 @@
         android:id="@+id/qst"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Right!"
+        android:id="@+id/txtRight"
+        android:capitalize="characters"
+        android:textColor="@color/accent_material_light"
+        android:textStyle="bold|italic"
+        android:visibility="gone"
+        android:textSize="@dimen/abc_text_size_display_3_material"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/qst"
+        android:layout_marginBottom="80dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Wrong!"
+        android:id="@+id/txtWrong"
+        android:textStyle="bold|italic"
+        android:textAlignment="gravity"
+        android:textSize="@dimen/abc_text_size_display_3_material"
+        android:visibility="gone"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_alignTop="@+id/txtRight"
+        android:layout_alignEnd="@+id/qst" />
 
 </RelativeLayout>
