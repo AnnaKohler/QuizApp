@@ -7,23 +7,9 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ru.startandroid.myapplication.MainActivity">
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/btn1"
-        android:layout_alignTop="@+id/btn2" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/btn2"
-        android:layout_marginBottom="72dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
+    tools:context="ru.startandroid.myapplication.MainActivity"
+    android:clickable="true"
+    android:contextClickable="false">
 
     <TextView
         android:layout_width="wrap_content"
@@ -33,19 +19,19 @@
         android:textStyle="bold"
         android:id="@+id/qst"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical|center_horizontal"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Right!"
+        android:text="@string/rightAns"
         android:id="@+id/txtRight"
-        android:capitalize="characters"
         android:textColor="@color/accent_material_light"
         android:textStyle="bold|italic"
         android:visibility="gone"
-        android:textSize="@dimen/abc_text_size_display_3_material"
+        android:textSize="56sp"
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/qst"
         android:layout_marginBottom="80dp" />
@@ -54,14 +40,49 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Wrong!"
+        android:text="@string/wrongAns"
         android:id="@+id/txtWrong"
         android:textStyle="bold|italic"
-        android:textAlignment="gravity"
-        android:textSize="@dimen/abc_text_size_display_3_material"
+        android:textSize="56sp"
         android:visibility="gone"
         android:textColor="@android:color/holo_red_light"
-        android:layout_alignTop="@+id/txtRight"
-        android:layout_alignEnd="@+id/qst" />
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/qst"
+        android:layout_marginBottom="80dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/noBtn"
+        android:id="@+id/btn2"
+        android:textSize="50sp"
+        android:textColor="@color/material_deep_teal_200"
+        android:clickable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/yesBtn"
+        android:id="@+id/btn1"
+        android:textSize="50sp"
+        android:textColor="@color/material_deep_teal_200"
+        android:clickable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nextBtn"
+        android:id="@+id/btn3"
+        android:textSize="50sp"
+        android:textColor="@color/material_deep_teal_200"
+        android:clickable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

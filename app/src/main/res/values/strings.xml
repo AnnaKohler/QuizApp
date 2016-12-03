@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="stringQstNumb">Question </string>
-    <string name="stringQst">Are u insane like me?</string>
+    <string name="stringQst">Question 0</string>
+    <string name="yesBtn">Yes</string>
+    <string name="noBtn">No</string>
+    <string name="nextBtn">Next</string>
+    <string name="rightAns">Right!</string>
+    <string name="wrongAns">Wrong!</string>
 </resources>
