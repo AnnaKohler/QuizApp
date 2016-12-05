@@ -1,5 +1,8 @@
 package ru.startandroid.myapplication;
 
+import android.widget.Button;
+import android.widget.TextView;
+
 /**
  * Created by Anna on 02.12.2016.
  */
@@ -37,8 +40,8 @@ public class TrueFalse {
     public void setQuestionId(String questionId) {
         mQuestion = questionId;
     }
-    public static void reaction(TrueFalse t){ //TODO: Метод для проверки ответа
-
+    public boolean reaction(TextView t){ //TODO: Метод для проверки ответа
+        return((this.isTrueQuestion()&& t.getText()=="Yes")||(!this.isTrueQuestion()&& t.getText()=="No"));
     }
 
 }

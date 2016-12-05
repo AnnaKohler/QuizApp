@@ -12,7 +12,7 @@ import org.w3c.dom.Text;
 public class MainActivity extends AppCompatActivity {
     boolean ans=true;
 
-    TrueFalse arr[]=new TrueFalse[]{
+     TrueFalse arr[]=new TrueFalse[]{
             new TrueFalse("Сапфо писала на эолийском диалекте", true ),
             new TrueFalse("Алкей писал ямбом", false ),
             new TrueFalse("Мне уже скучно писать вопросы", false ),
