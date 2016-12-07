@@ -6,4 +6,6 @@
     <string name="nextBtn">Next</string>
     <string name="rightAns">Right!</string>
     <string name="wrongAns">Wrong!</string>
+    <string name="Cheat">Cheat</string>
+    <string name="cheatTxt">Wanna Cheat?</string>
 </resources>

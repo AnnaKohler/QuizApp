@@ -30,7 +30,7 @@
         android:id="@+id/txtRight"
         android:textColor="@color/accent_material_light"
         android:textStyle="bold|italic"
-        android:visibility="gone"
+        android:visibility="visible"
         android:textSize="56sp"
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/qst"
@@ -44,7 +44,7 @@
         android:id="@+id/txtWrong"
         android:textStyle="bold|italic"
         android:textSize="56sp"
-        android:visibility="gone"
+        android:visibility="visible"
         android:textColor="@android:color/holo_red_light"
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/qst"
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/noBtn"
-        android:id="@+id/btn2"
+        android:id="@+id/btnNo"
         android:textSize="50sp"
         android:textColor="@color/material_deep_teal_200"
         android:clickable="true"
@@ -67,7 +67,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/yesBtn"
-        android:id="@+id/btn1"
+        android:id="@+id/btnYes"
         android:textSize="50sp"
         android:textColor="@color/material_deep_teal_200"
         android:clickable="true"
@@ -78,11 +78,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nextBtn"
-        android:id="@+id/btn3"
+        android:id="@+id/btnNext"
         android:textSize="50sp"
         android:textColor="@color/material_deep_teal_200"
         android:clickable="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Cheat"
+            android:id="@+id/btnCht" />
+    </LinearLayout>
 
 </RelativeLayout>

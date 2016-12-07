@@ -1,5 +1,6 @@
 package ru.startandroid.myapplication;
 
+import android.content.Intent;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,7 +11,9 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
-    boolean ans=true;
+    boolean isCheat=false;
+    public static String KEY_QA="Question_answer";
+    public static String KEY_QT="Question_text";
 
      TrueFalse arr[]=new TrueFalse[]{
             new TrueFalse("Сапфо писала на эолийском диалекте", true ),
@@ -26,9 +29,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         int score=0;
 
-        TextView btn1=(TextView) findViewById(R.id.btn1);
-        TextView btn2 =(TextView) findViewById(R.id.btn2);
-        TextView btn3 =(TextView) findViewById(R.id.btn3);
+        TextView btn1=(TextView) findViewById(R.id.btnYes);
+        TextView btn2 =(TextView) findViewById(R.id.btnNo);
+        TextView btn3 =(TextView) findViewById(R.id.btnNext);
+        Button btn4=(Button)findViewById(R.id.btnCht);
         final TextView qsttext=(TextView) findViewById(R.id.qst);
         qsttext.setText(arr[pos].getQuestion());
 
@@ -41,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
               if(arr[pos].isTrueQuestion()) {
                   findViewById(R.id.txtRight).setVisibility(View.VISIBLE);
+                  isCheat=false;
                   if(pos<arr.length-1) pos++;
                   else pos=0;
                   qsttext.setText(arr[pos].getQuestion());
@@ -55,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 findViewById(R.id.txtRight).setVisibility(View.GONE);
                 if(!arr[pos].isTrueQuestion()) {
                     findViewById(R.id.txtRight).setVisibility(View.VISIBLE);
+                    isCheat=false;
                     if(pos<arr.length-1) pos++;
                     else pos=0;
                     qsttext.setText(arr[pos].getQuestion());
@@ -69,6 +75,17 @@ public class MainActivity extends AppCompatActivity {
                     else pos=0;
                     qsttext.setText(arr[pos].getQuestion());
                 }
+        });
+        btn4.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent i=new Intent(MainActivity.this, CheatActivity.class);
+                i.putExtra(KEY_QT, arr[pos].getQuestion());
+                i.putExtra(KEY_QA, arr[pos].isTrueQuestion());
+                startActivity(i);
+                //onActivityResult(int requestCode, int resultCode, Intent data); TODO: onActivityresult
+
+            }
         });
     }
 
