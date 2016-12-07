@@ -17,7 +17,7 @@ public class CheatActivity extends AppCompatActivity {
         TextView question=(TextView)findViewById(R.id.textView2);
         question.setText(i.getStringExtra("Question_text")); //TODO: Верстка
         Intent j=new Intent(CheatActivity.this, MainActivity.class);
-        //TODO:Флаг чита //
+        //TODO:Флаг чита 
 
 
     }
