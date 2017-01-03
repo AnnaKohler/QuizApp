@@ -1,11 +1,19 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="stringQst">Question 0</string>
-    <string name="yesBtn">Yes</string>
-    <string name="noBtn">No</string>
-    <string name="nextBtn">Next</string>
+    <string name="question_sapfo">Сапфо писала на эолийском диалекте</string>
+    <string name="question_alkej">Алкей писал ямбом</string>
+    <string name="question_bored">Мне уже скучно писать вопросы</string>
+    <string name="question_number4">Следующий вопрос - номер 4</string>
+    <string name="question_end">Это еще не конец</string>
+
+    <string name="yesBtn">YES</string>
+    <string name="noBtn">NO</string>
+    <string name="nextBtn">NEXT</string>
+
     <string name="rightAns">Right!</string>
     <string name="wrongAns">Wrong!</string>
+
     <string name="Cheat">Cheat</string>
     <string name="cheatTxt">Wanna Cheat?</string>
 </resources>

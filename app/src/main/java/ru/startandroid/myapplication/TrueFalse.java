@@ -8,7 +8,7 @@ import android.widget.TextView;
  */
 public class TrueFalse {
     private boolean mTrueQuestion;
-    private String mQuestion;
+    private int mQuestion;
 
     public TrueFalse() {
     }
@@ -21,7 +21,7 @@ public class TrueFalse {
                 '}';
     }
 
-    public TrueFalse(String question, boolean trueQuestion) {
+    public TrueFalse(int question, boolean trueQuestion) {
         mQuestion = question;
         mTrueQuestion = trueQuestion;
     }
@@ -33,15 +33,12 @@ public class TrueFalse {
     public void setTrueQuestion(boolean trueQuestion) {
         mTrueQuestion = trueQuestion;
     }
-    public String getQuestion() {
+    public int getQuestion() {
         return mQuestion;
     }
 
-    public void setQuestionId(String questionId) {
+    public void setQuestionId(int questionId) {
         mQuestion = questionId;
-    }
-    public boolean reaction(TextView t){ //TODO: Метод для проверки ответа
-        return((this.isTrueQuestion()&& t.getText()=="Yes")||(!this.isTrueQuestion()&& t.getText()=="No"));
     }
 
 }
